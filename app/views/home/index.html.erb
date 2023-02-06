@@ -11,7 +11,7 @@
       <br>
 
       <%= label_tag :article_id, "Select article" %>
-      <%= select_tag :category_id, options_for_select(article_options),
+      <%= select_tag :category_id, options_for_select([]),
         include_blank: "Please select",
         class: "form-control",
         id: "js-select-article-id" %>
