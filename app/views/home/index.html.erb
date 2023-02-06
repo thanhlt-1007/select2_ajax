@@ -4,11 +4,17 @@
   <%= form_tag "#" do %>
     <div class="form-group">
       <%= label_tag :category_id, "Select category" %>
-      <%= select_tag :category_id, options_for_select(category_options), include_blank: true, class: "form-control" %>
+      <%= select_tag :category_id, options_for_select(category_options),
+        include_blank: "Please select",
+        class: "form-control",
+        id: "js-select-category-id" %>
       <br>
 
       <%= label_tag :article_id, "Select article" %>
-      <%= select_tag :category_id, options_for_select(article_options), include_blank: true, class: "form-control" %>
+      <%= select_tag :category_id, options_for_select(article_options),
+        include_blank: "Please select",
+        class: "form-control",
+        id: "js-select-article-id" %>
       <br>
     </div>
   <% end %>
